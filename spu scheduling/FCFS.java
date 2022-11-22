@@ -34,9 +34,9 @@ class FCFS {
 
         }
         float s = (float) total_wt / (float) n;
-        float t = (float) total_tat / (float) n;
+        int t = total_tat / n;
         System.out.printf("Average waiting time = %f\n", s);
-        System.out.printf("Average Turn Around Time = %f", t);
+        System.out.printf("Average Turn Around Time = %d", t);
 
     }
 

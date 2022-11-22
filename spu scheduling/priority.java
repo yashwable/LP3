@@ -5,15 +5,15 @@ public class priority {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter no of processes");
         int n = sc.nextInt();
-        int[] pid = new int[n];
-        int[] at = new int[n];
-        int[] bt = new int[n];
+        int[] pid = new int[n]; // process id
+        int[] at = new int[n]; // srrival time
+        int[] bt = new int[n]; // burst time
         int[] priority = new int[n];
-        int[] wt = new int[n];
-        int[] tat = new int[n];
-        int[] ct = new int[n];
+        int[] wt = new int[n]; // waiting time
+        int[] tat = new int[n]; // turn around time
+        int[] ct = new int[n]; // complete time
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) { // tazking input of arrival,priority and burst time
             System.out.println("enter arrival time of process" + (i + 1));
             at[i] = sc.nextInt();
             System.out.println("enter burst time of process" + (i + 1));
@@ -24,22 +24,21 @@ public class priority {
         }
         int temp;
         for (int i = 0; i < n; i++) {
-
             for (int j = 0; j < n - i - 1; j++) {
                 if (at[j] > at[j + 1]) {
-                    temp = at[j];
+                    temp = at[j]; // arrival time swapping
                     at[j] = at[j + 1];
                     at[j + 1] = temp;
 
-                    temp = bt[j];
+                    temp = bt[j]; // burst time swapping
                     bt[j] = bt[j + 1];
                     bt[j + 1] = temp;
 
-                    temp = priority[j];
+                    temp = priority[j]; // priority time swapping
                     priority[j] = priority[j + 1];
                     priority[j + 1] = temp;
 
-                    temp = pid[j];
+                    temp = pid[j]; // pid swapping
                     pid[j] = pid[j + 1];
                     pid[j + 1] = temp;
                 }
@@ -85,7 +84,7 @@ public class priority {
         float avgwt = sumwt / n;
         float avgtat = sumtat / n;
 
-        System.out.println("Priority Schedulig algorithm");
+        System.out.println("Priority Scheduling algorithm");
         System.out.format("%20s%20s%20s%20s%20s%20s%20s\n", "pid", "arrivalTime", "burstTime", "priority",
                 "waitingTime", "TurnAroundTime", "completionTime");
 
@@ -95,6 +94,5 @@ public class priority {
         }
         System.out.format("%80s%20f%20f", "average", avgwt, avgtat);
         sc.close();
-
     }
 }

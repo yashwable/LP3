@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class sjf1 {
+public class sjf {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter no of processes ");

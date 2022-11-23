@@ -24,7 +24,7 @@ public class sjf {
             pid[i] = i + 1;
             f[i] = 0;
         }
-        boolean a = true;
+        // boolean a = true;
         while (true) {
             int c = n, min = 999;
             if (tot == n) // total no of process = completed process loop will be terminated

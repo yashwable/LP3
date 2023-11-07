@@ -1,0 +1,15 @@
+1. Network Name
+ Binance Smart Chain
+
+2. New RPC URL
+ https://bsc-dataseed.binance.org/
+
+3. Chain ID
+   56
+
+4.Currency Symbol (optional )
+
+BNB
+
+Block Explorer URL (optional)
+http://bscscan.com/
